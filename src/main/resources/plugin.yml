@@ -1,0 +1,8 @@
+name: CommandBoard
+version: @version@
+main: net.zoizoi.plugin.commandboard.Main
+api-version: 1.15
+prefix: CommandBoard
+authors: [ZOI]
+description: コマンドを実行できる看板を追加しました
+website: https://github.com/ZOI-dayo/CommandBoard_Plugin
