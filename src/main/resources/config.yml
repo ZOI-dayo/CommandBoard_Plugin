@@ -1,0 +1,12 @@
+commands:
+  id:
+    selectors:
+      1:
+        text: Help
+        command: /help
+      2:
+  test:
+    selectors:
+      1:
+        text: Hello!
+        command: /kill @p
