@@ -15,34 +15,34 @@ public class PluginEventsListener implements Listener {
 
     // 左クリック
     @EventHandler
-    public void BlockDamageEvent(BlockDamageEvent e){
-        if(CommandBoardLogic.CheckSign(e.getBlock())){
-            CommandBoardLogic.OnLeftClick(e.getBlock());
+    public void BlockDamageEvent(BlockDamageEvent e) {
+        if (CommandBoardLogic.CheckSign(e.getBlock())) {
+            CommandBoardLogic.OnLeftClick(e.getBlock(), e.getPlayer());
         }
     }
 
     // 破壊
     @EventHandler
-    public void BlockBreakEvent(BlockBreakEvent e){
-        if(CommandBoardLogic.CheckSign(e.getBlock())){
+    public void BlockBreakEvent(BlockBreakEvent e) {
+        if (CommandBoardLogic.CheckSign(e.getBlock())) {
             CommandBoardLogic.OnBreakSign(e);
         }
     }
 
     // 設置
     @EventHandler
-    public void BlockPlaceEvent(BlockPlaceEvent e){
-        if(CommandBoardLogic.CheckSign(e.getBlock())){
+    public void BlockPlaceEvent(BlockPlaceEvent e) {
+        if (CommandBoardLogic.CheckSign(e.getBlock())) {
             CommandBoardLogic.OnMakeSign(e);
         }
     }
 
     // 右クリック
     @EventHandler
-    public void PlayerInteractEvent(PlayerInteractEvent e){
+    public void PlayerInteractEvent(PlayerInteractEvent e) {
         if (e.getAction() != Action.RIGHT_CLICK_BLOCK) return;
-        if(CommandBoardLogic.CheckSign(e.getClickedBlock())){
-            CommandBoardLogic.OnRightClick(e.getClickedBlock());
+        if (CommandBoardLogic.CheckSign(e.getClickedBlock())) {
+            CommandBoardLogic.OnRightClick(e.getClickedBlock(), e.getPlayer());
         }
     }
 }
